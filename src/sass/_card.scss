@@ -1,0 +1,106 @@
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  background-color: #fbfbfb;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 10px;
+
+  &__pending,
+  &__finished,
+  &__empty-todo {
+    padding: 2rem;
+    font-style: italic;
+  }
+
+  // &__pending,
+  // &__finished {
+  //   text-decoration: underline;
+  // }
+
+  &__pending {
+    order: 1;
+  }
+
+  &__finished {
+    order: 3;
+  }
+
+  &__empty-todo {
+    order: 2;
+    width: 100%;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-align: left;
+  }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  order: 2;
+  max-width: 100%;
+  cursor: pointer;
+
+  &__text {
+    padding: 2rem;
+    width: 100%;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-align: left;
+  }
+
+  &__edit {
+    width: 100%;
+    border: 0;
+    padding: 2rem;
+    border-bottom: 2px solid #888;
+
+    &::placeholder {
+      font-style: italic;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__btn--edit,
+  &__btn--delete,
+  &__btn--save {
+    color: white;
+    padding: 1rem;
+    border: solid;
+    margin: 0 1rem;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+  
+  &__btn--edit,
+  &__btn--save {
+      background-color: #000;
+  }
+
+  &__btn--delete {
+      background-color: red;
+    }
+}
+
+.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  order: 4;
+}
+
+.fa-check,
+.fa-trash,
+.fa-pen,
+.fa-check {
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
