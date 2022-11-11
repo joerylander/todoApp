@@ -18,8 +18,8 @@ const Form = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-        <input maxLength="50" type="text" onChange={handleChange} value={input} placeholder="Enter todo..." className="form__description" required />
-        <input type="submit" className="form__btn" value="Add" />
+      <input maxLength="50" type="text" onChange={handleChange} value={input} placeholder="Enter task..." className="form__description" required />
+      <input type="submit" className="form__btn" value="Add" />
     </form>
   );
 };
